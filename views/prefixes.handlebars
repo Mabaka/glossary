@@ -1,0 +1,24 @@
+<a class="button-link" href="adding_prefix">Добавить корень</a>
+<div class="prefixes-table-wrapper">
+    <table class="prefixes-table table">
+        <tr class="prefixes-table-string header-string">
+            <th class="prefixes-table-header-data header_data">Корень</th>
+            <th class="prefixes-table-header-data header_data">Латынь</th>
+            <th class="prefixes-table-header-data header_data">Значение</th>
+            <th class="prefixes-table-header-data header_data">Дата добавления</th>
+        </tr>
+        {{#each prefixes}}
+            <tr class="prefixes-table-string row-string">
+                <td class="prefixes-table-row-data row_data">
+                    <div class="header-data-text">{{this.prefix}}</div>
+                    <a class="del-img-link" href="del_prefix/{{this._id}}">
+                        <div class="del-img-wrapper"></div>
+                    </a>
+                </td>
+                <td class="prefixes-table-row-data row_data">{{this.lat}}</td>
+                <td class="prefixes-table-row-data row_data">{{this.prefix_def}}</td>
+                <td class="prefixes-table-row-data row_data">{{getTime this.created}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

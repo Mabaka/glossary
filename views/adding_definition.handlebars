@@ -1,0 +1,23 @@
+<a class="button-link" href="/definitions/">Список определений</a>
+<div class="adding-definition-form-wrapper">
+    <form class="form def-form" action="addDefinition" method="POST" class="adding-definition-form">
+
+        <label for="prefix_field">Первый корень</label>
+        <select class="select" name="prefix_field" id="prefix_field">
+            {{#each prefixes}}
+                <option value="{{this.prefix}}">{{this.prefix}}</option>
+            {{/each}}
+        </select>
+
+        <label for="postfix_field">Второй корень</label>
+        <select class="select" name="postfix_field" id="postfix_field">
+            {{#each prefixes}}
+                <option value="{{this.prefix}}">{{this.prefix}}</option>
+            {{/each}}
+        </select>
+
+        <label class="text-field__label" for="def_field">Определение</label>
+        <textarea class="text-field_area" type="text" name="def_field" id="def_field" rows="10"></textarea>
+        <input class="button" value = "Внести слово" type="submit">
+    </form>
+</div>

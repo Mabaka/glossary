@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.7",
+    "node": "^17.7.1"
+  },
+  "devDependencies": {
+    "handlebars": "4.4"
+  }
+}

@@ -1,0 +1,24 @@
+<div class="menu-wrapper">
+    <menu class="menu">
+        <a class="button-link menu-element" href="/definitions/">Определения</a>
+        <a class="button-link menu-element" href="/prefixes/">Корни</a>
+    </menu>
+</div>
+
+<div class="def-table-wrapper">
+    <table class="def-table table">
+        <div class="text text-new-def">Недавно добавленные</div>
+        <tr class="def-table-string header-string">
+            <th class="def-table-header-data header_data">Слово</th>
+            <th class="def-table-header-data header_data">Значение</th>
+            <th class="def-table-header-data header_data">Дата добавления</th>
+        </tr>
+        {{#each definitions}}
+            <tr class="def-table-string row-string">
+                <td class="def-table-row_data row_data">{{this.prefix}}{{this.postfix}}</td>
+                <td class="def-table-row_data row_data">{{this.definition}}</td>
+                <td class="def-table-row_data row_data">{{getTime this.created}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
