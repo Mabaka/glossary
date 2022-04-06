@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 let Schema = mongoose.Schema;
-mongoose.connect('mongodb://localhost:27017/');
+mongoose.connect('mongodb://mongo:27017/db');
 
 let def_schema = new Schema(
     {

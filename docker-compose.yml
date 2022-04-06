@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  node:
+      container_name: app_node
+      build: ./
+      ports:
+        - 2000:2000
+      restart: always
+      tty: true
+      networks:
+        - myapp
+  mongo:
+    container_name: app_mongo
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    networks:
+      - myapp
+networks:
+    myapp:
+        driver: bridge
